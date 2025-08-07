@@ -1,0 +1,54 @@
+.flex-w {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-t {
+  align-items: flex-start;
+}
+
+.size-208 {
+  width: 90px;   /* consistent label width */
+}
+
+.size-209 {
+  flex: 1;        /* take the remaining space */
+}
+
+/* .bor12 {
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+} */
+
+.p-t-15, .p-b-30, .p-t-27, .p-b-33 {
+  padding-top: 5px; /* or your preferred spacing */
+  padding-bottom: 5px;
+}
+
+.icon-box {
+  width: 40px;             /* Set fixed width for alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #333;             /* Optional icon color */
+}
+
+.text-box {
+  flex: 1;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+button.small-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  min-width: auto;
+  height: auto;
+  justify-self: center;
+  margin-top: 15px;
+}
+button.small-btn:hover{
+    background-color: red;
+}

@@ -1,0 +1,118 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* =============== MODAL ===============  */
+.otp-modal{
+  display: grid;
+  place-items: center;
+} 
+.otp-subheading{
+  font-size: 0.8em;
+  color: #000;
+  line-height: 17px;
+  text-align: center;
+}
+.resend-note{
+  font-size: 0.8em;
+  color: #000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.resend-btn{
+  background-color: transparent;
+  border: none;
+  color: rgb(127, 129, 255);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* ==================================== */
+.otp-container{
+  width: 300px;
+  height: auto;
+  margin: 20px 0;
+  padding: 40px 30px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transform: scale(1);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.082);
+}
+
+.otp-container h4{
+  font-size: 20px;
+  color: #121212;
+  font-family: sans-serif;
+}
+
+.otp-container .otp-form{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.otp-form .input_fields{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.input_fields input{
+  max-width: 20%;
+  height: 60px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  background: #f0f0f0;
+  font-size: 25px;
+}
+
+.input_fields input::-webkit-inner-spin-button,
+.input_fields input::-webkit-outer-spin-button{
+  display: none;
+}
+
+.input_fields input:focus{
+  outline: 3px solid #00b991;
+  outline-offset: 2px;
+}
+
+.otp-form .verify-btn{
+  margin-top: 25px;
+  width: 92%;
+  background: #e9d585;
+  color: #525252;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.otp-form .verify-btn.active{
+  background: #ffcc00;
+  pointer-events: auto;
+  color: #000;
+}
+
+.otp-form .verify-btn:hover{
+  background: #e6b801;
+}   

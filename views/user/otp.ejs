@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/localcss/otp.css">
+
+<div class="otp-modal">
+    <div class="otp-container">
+        <h4>Enter Your 4 Digit OTP</h4>
+        <p class="otp-subheading">we have sent a verification code to your mobile number</p>
+        <form action="/verifyOTP/<%=user._id%>" class="otp-form" method="post">
+            <div class="input_fields">
+                <input class="otp-inputs" type="number" name="otp">
+                <input class="otp-inputs" type="number" name="otp" disabled>
+                <input class="otp-inputs" type="number" name="otp" disabled>
+                <input class="otp-inputs" type="number" name="otp" disabled>
+            </div>
+        
+            <button class="verify-btn">Vefify OTP</button>
+            <p class="resend-note">Didn't receive the code? <a class="resend-btn">Resend code</a></p>
+        </form>
+        </div>
+</div>
+<script src="/localejs/otp.js"></script>

@@ -1,0 +1,64 @@
+<!-- <link rel="stylesheet" href="/localcss/auth.css"> -->
+<section class="section-slide">
+    <div class="wrap-slick1">
+    <div class="wrapper">
+        <div class="container main">
+            <div class="row" id="row">
+                <div class="col-md-6 side-image">
+                    <img id="logo" src="/localimages/logo.svg" alt="">
+                  <div class="text">
+                    <p>Greetings and welcome to SleekStyle! We are delighted to see you as a part of our community.
+                         Feel free to discover and shopping with us to create something wonderful. <i>-SleekStyle</i></p>
+                  </div>
+                </div>
+                <div class="col-md-6 right">
+                     <div class="input-box">
+                        <header>LOG IN</header>
+                        <form action="/user-login" method="post" id="loginform">
+                            <div class="input-field">
+                                <input type="text" name="email" id="email" class="input" required>
+                                <label class="formlabel" for="email">Email</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" name="password" id="password" class="input" required>
+                                <label class="formlabel" for="password">Password</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="submit" class="submit" value="Log in">
+                            </div>
+                        </form>
+                        <div class="signin">
+                             <span>Don't have an account?<a href="/user-signup">Sign up Here</a> <br> or <br> <a href="/forgot-password">Forgott password?</a></span>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script>
+    $("#loginform").validate({
+    rules:{
+        email:{
+            required:true,
+            email:true
+        },
+        password:{
+            required:true,
+            minlength:6
+        }
+    },
+    messages:{
+        password:{
+            required:"please provide your password",
+            minlength:"your password must be atleast 5 charecters"
+        }
+    },
+    submitHandler: function(form) {
+     form.submit();
+    }
+ });
+</script>

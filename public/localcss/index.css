@@ -1,0 +1,28 @@
+.banner-row{
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1.5rem;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+.banner-row > [class*="col-"]{
+    flex: 0 0 350px;
+    max-width: 450px;
+    scroll-snap-align: start;
+}
+.arrow-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    color: #000;
+    border: none;
+    font-size: 4rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.left-arrow{left: 20px;}
+.right-arrow{right: 10px;}
+.banner-row::-webkit-scrollbar{display: none;}
+.banner-row{scrollbar-width: none;};
