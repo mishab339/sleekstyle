@@ -1,0 +1,339 @@
+<!-- breadcrumb -->
+<div class="container">
+  <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+    <a href="index.html" class="stext-109 cl8 hov-cl1 trans-04">
+      Home
+      <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+    </a>
+
+    <span class="stext-109 cl4"> Shopping Cart </span>
+  </div>
+</div>
+
+<!-- Shopping Cart -->
+<div class="bg0 p-t-75 p-b-85">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
+        <div
+          class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm"
+        >
+          <h4 class="mtext-109 cl2">Hello Mishab</h4>
+          <div class="flex-w flex-t bor12 p-b-13"></div>
+
+          <div class="flex-w flex-t bor12 p-t-15 p-b-30">
+            <!-- Profile -->
+            <a
+              href="/account-details"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Profile Information</span>
+              </div>
+            </a>
+
+            <!-- Super Coin -->
+            <a
+              href="/super-coin"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-coins"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Super Coin</span>
+              </div>
+            </a>
+
+            <!-- Orders -->
+            <a
+              href="/orders"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-truck"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Orders</span>
+              </div>
+            </a>
+
+            <!-- Wish List -->
+            <a
+              href="/wishlist"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Wish List</span>
+              </div>
+            </a>
+
+            <!-- Coupons -->
+            <a
+              href="/coupons"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-ticket"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Coupons</span>
+              </div>
+            </a>
+            <a
+              href="/address"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-address-card"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Address</span>
+              </div>
+            </a>
+
+            <!-- Notifications -->
+            <a
+              href="/notifications"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-bell"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Notifications</span>
+              </div>
+            </a>
+          </div>
+
+          <button
+            class="small-btn flex-c-m stext-101 cl0 bg3 bor14 trans-04 pointer"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
+        <div class="wishlist-container" id="wishlistContainer">
+            <!-- Item 1 -->
+            <div class="wishlist-item" data-search="wireless headphones premium">
+                <div class="item-content">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=120&h=100&fit=crop" alt="Wireless Headphones" class="product-image">
+                    <div class="product-details">
+                        <div class="product-info">
+                            <div class="product-name">Premium Wireless Headphones</div>
+                            <div class="product-description">Noise-cancelling, 30-hour battery life</div>
+                            <div class="product-rating">
+                                <span class="rating-stars">★★★★★</span>
+                                <span class="rating-text">(4.8) 2,341 reviews</span>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                                <button class="btn btn-secondary">View Product</button>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            $299.99
+                            <span class="price-original">$399.99</span>
+                        </div>
+                        <button class="delete-btn" onclick="removeItem(this)"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="wishlist-item" data-search="smartphone case leather">
+                <div class="item-content">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=120&h=100&fit=crop" alt="Smartphone Case" class="product-image">
+                    <div class="product-details">
+                        <div class="product-info">
+                            <div class="product-name">Leather Smartphone Case</div>
+                            <div class="product-description">Genuine leather, multiple card slots</div>
+                            <div class="product-rating">
+                                <span class="rating-stars">★★★★☆</span>
+                                <span class="rating-text">(4.3) 856 reviews</span>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                                <button class="btn btn-secondary">View Product</button>
+                            </div>
+                        </div>
+                        <div class="product-price">$49.99</div>
+                        <button class="delete-btn" onclick="removeItem(this)">🗑️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="wishlist-item" data-search="running shoes nike air max">
+                <div class="item-content">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=120&h=100&fit=crop" alt="Running Shoes" class="product-image">
+                    <div class="product-details">
+                        <div class="product-info">
+                            <div class="product-name">Nike Air Max Running Shoes</div>
+                            <div class="product-description">Lightweight, breathable, size 9</div>
+                            <div class="product-rating">
+                                <span class="rating-stars">★★★★★</span>
+                                <span class="rating-text">(4.9) 5,234 reviews</span>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                                <button class="btn btn-secondary">View Product</button>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            $159.99
+                            <span class="price-original">$179.99</span>
+                        </div>
+                        <button class="delete-btn" onclick="removeItem(this)">🗑️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="wishlist-item" data-search="coffee maker automatic">
+                <div class="item-content">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=120&h=100&fit=crop" alt="Coffee Maker" class="product-image">
+                    <div class="product-details">
+                        <div class="product-info">
+                            <div class="product-name">Automatic Coffee Maker</div>
+                            <div class="product-description">12-cup capacity, programmable timer</div>
+                            <div class="product-rating">
+                                <span class="rating-stars">★★★★☆</span>
+                                <span class="rating-text">(4.5) 1,123 reviews</span>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                                <button class="btn btn-secondary">View Product</button>
+                            </div>
+                        </div>
+                        <div class="product-price">$199.99</div>
+                        <button class="delete-btn" onclick="removeItem(this)">🗑️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="wishlist-item" data-search="bluetooth speaker portable">
+                <div class="item-content">
+                    <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=120&h=100&fit=crop" alt="Bluetooth Speaker" class="product-image">
+                    <div class="product-details">
+                        <div class="product-info">
+                            <div class="product-name">Portable Bluetooth Speaker</div>
+                            <div class="product-description">Waterproof, 20-hour battery life</div>
+                            <div class="product-rating">
+                                <span class="rating-stars">★★★★★</span>
+                                <span class="rating-text">(4.7) 3,456 reviews</span>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                                <button class="btn btn-secondary">View Product</button>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            $89.99
+                            <span class="price-original">$119.99</span>
+                        </div>
+                        <button class="delete-btn" onclick="removeItem(this)">🗑️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="wishlist-item" data-search="smart watch apple series">
+                <div class="item-content">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=120&h=100&fit=crop" alt="Smart Watch" class="product-image">
+                    <div class="product-details">
+                        <div class="product-info">
+                            <div class="product-name">Apple Watch Series 9</div>
+                            <div class="product-description">GPS, 45mm, Midnight Aluminum</div>
+                            <div class="product-rating">
+                                <span class="rating-stars">★★★★★</span>
+                                <span class="rating-text">(4.8) 8,921 reviews</span>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                                <button class="btn btn-secondary">View Product</button>
+                            </div>
+                        </div>
+                        <div class="product-price">$399.99</div>
+                        <button class="delete-btn" onclick="removeItem(this)">🗑️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="wishlist-item" data-search="tablet ipad air">
+                <div class="item-content">
+                    <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=120&h=100&fit=crop" alt="Tablet" class="product-image">
+                    <div class="product-details">
+                        <div class="product-info">
+                            <div class="product-name">iPad Air 5th Generation</div>
+                            <div class="product-description">10.9-inch, Wi-Fi, 64GB, Blue</div>
+                            <div class="product-rating">
+                                <span class="rating-stars">★★★★★</span>
+                                <span class="rating-text">(4.9) 12,543 reviews</span>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                                <button class="btn btn-secondary">View Product</button>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            $599.99
+                            <span class="price-original">$649.99</span>
+                        </div>
+                        <button class="delete-btn" onclick="removeItem(this)">🗑️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="wishlist-item" data-search="gaming mouse wireless">
+                <div class="item-content">
+                    <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=120&h=100&fit=crop" alt="Gaming Mouse" class="product-image">
+                    <div class="product-details">
+                        <div class="product-info">
+                            <div class="product-name">Wireless Gaming Mouse</div>
+                            <div class="product-description">RGB lighting, 25,600 DPI, ultra-lightweight</div>
+                            <div class="product-rating">
+                                <span class="rating-stars">★★★★☆</span>
+                                <span class="rating-text">(4.6) 2,789 reviews</span>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                                <button class="btn btn-secondary">View Product</button>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            $79.99
+                            <span class="price-original">$99.99</span>
+                        </div>
+                        <button class="delete-btn" onclick="removeItem(this)">🗑️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+
+<script>
+  document.querySelectorAll(".link-row").forEach((link) => {
+    if (link.getAttribute("href") === window.location.pathname) {
+      link.style.color = "#717fe0";
+      const icon = link.querySelector("i");
+      if (icon) {
+        icon.style.color = "#717fe0";
+      }
+    }
+  });
+</script>

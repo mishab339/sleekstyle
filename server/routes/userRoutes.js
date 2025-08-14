@@ -15,6 +15,12 @@ router.get('/contact',userController.contact);
 router.get('/user-login',userController.userLogin);
 router.get('/user-signup',userController.userSignup);
 router.get('/account-details',userController.accountDetails);
+router.get('/super-coin',userController.superCoins);
+router.get('/orders',userController.getOrders);
+router.get("/wish-list",userController.getWhishList);
+router.get("/coupons",userController.getCoupons);
+router.get("/address",userController.getAddresses);
+router.get("/notifications",userController.getNotifications);
 router.get("/product-details",userController.getProductDetails);
 router.get("/offer-details",userController.getOfferDetails);
 

@@ -1,0 +1,140 @@
+<!-- breadcrumb -->
+<div class="container">
+  <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+    <a href="index.html" class="stext-109 cl8 hov-cl1 trans-04">
+      Home
+      <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+    </a>
+
+    <span class="stext-109 cl4"> Shopping Cart </span>
+  </div>
+</div>
+
+<!-- Shopping Cart -->
+<div class="bg0 p-t-75 p-b-85">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
+        <div
+          class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm"
+        >
+          <h4 class="mtext-109 cl2">Hello Mishab</h4>
+          <div class="flex-w flex-t bor12 p-b-13"></div>
+
+          <div class="flex-w flex-t bor12 p-t-15 p-b-30">
+            <!-- Profile -->
+            <a
+              href="/account-details"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Profile Information</span>
+              </div>
+            </a>
+
+            <!-- Super Coin -->
+            <a
+              href="/super-coin"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-coins"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Super Coin</span>
+              </div>
+            </a>
+
+            <!-- Orders -->
+            <a
+              href="/orders"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-truck"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Orders</span>
+              </div>
+            </a>
+
+            <!-- Wish List -->
+            <a
+              href="/wish-list"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Wish List</span>
+              </div>
+            </a>
+
+            <!-- Coupons -->
+            <a
+              href="/coupons"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-ticket"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Coupons</span>
+              </div>
+            </a>
+            <a
+              href="/address"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-address-card"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Address</span>
+              </div>
+            </a>
+
+            <!-- Notifications -->
+            <a
+              href="/notifications"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-bell"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Notifications</span>
+              </div>
+            </a>
+          </div>
+
+          <button
+            class="small-btn flex-c-m stext-101 cl0 bg3 bor14 trans-04 pointer"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+
+<script>
+  document.querySelectorAll(".link-row").forEach((link) => {
+    if (link.getAttribute("href") === window.location.pathname) {
+      link.style.color = "#717fe0";
+      const icon = link.querySelector("i");
+      if (icon) {
+        icon.style.color = "#717fe0";
+      }
+    }
+  });
+</script>

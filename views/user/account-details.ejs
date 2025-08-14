@@ -63,7 +63,7 @@
 
             <!-- Wish List -->
             <a
-              href="/wishlist"
+              href="/wish-list"
               class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
             >
               <div class="icon-box">
@@ -137,57 +137,72 @@
           </div>
           <div class="profile-form">
             <div class="field-group">
-              <input
-                type="text"
-                id="firstName"
-                class="info-input"
-                value="Aarav"
-                readonly
-              />
-              <input
-                type="text"
-                id="lastName"
-                class="info-input"
-                value="Sharma"
-                readonly
-              />
+              <div class="form-field">
+                <Label for="firstName">First Name</Label>
+                <input
+                  type="text"
+                  id="firstName"
+                  class="info-input"
+                  value="Aarav"
+                  readonly
+                />
+              </div>
+              <div class="form-field">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  class="info-input"
+                  value="Sharma"
+                  readonly
+                />
+              </div>
             </div>
             <div class="field-group">
-              <input
-                type="email"
-                id="userEmail"
-                class="info-input"
-                value="aarav.sharma@example.com"
-                readonly
-              />
-              <input
-                type="tel"
-                id="userPhone"
-                class="info-input"
-                value="+91 98765 43210"
-                readonly
-              />
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="userEmail"
+                  class="info-input"
+                  value="aarav.sharma@example.com"
+                  readonly
+                />
+              </div>
+              <div class="form-field">
+                <label for="phone">Phone</label>
+                <input
+                  type="tel"
+                  id="userPhone"
+                  class="info-input"
+                  value="+91 98765 43210"
+                  readonly
+                />
+              </div>
             </div>
-            <div class="gender-selection">
-              <label
-                ><input
-                  type="radio"
-                  name="gender"
-                  class="info-radio"
-                  value="Male"
-                  checked
-                  disabled
-                /><span>Male</span></label
-              >
-              <label
-                ><input
-                  type="radio"
-                  name="gender"
-                  class="info-radio"
-                  value="Female"
-                  disabled
-                /><span>Female</span></label
-              >
+            <div class="form-field">
+              <label for="gender">Gender</label>
+              <div class="gender-selection">
+                <label
+                  ><input
+                    type="radio"
+                    name="gender"
+                    class="info-radio"
+                    value="Male"
+                    checked
+                    disabled
+                  /><span>Male</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="gender"
+                    class="info-radio"
+                    value="Female"
+                    disabled
+                  /><span>Female</span></label
+                >
+              </div>
             </div>
           </div>
           <div class="button-container">
@@ -240,19 +255,19 @@
       reader.readAsDataURL(file);
     }
   });
-  editBtn.addEventListener('click',()=>{
-    profileCard.classList.add('edit-mode');
-    textInputs.forEach(input => input.removeAttribute('readonly'));
-    radioInputs.forEach(radio => radio.removeAttribute('disabled'));
-    document.getElementById('firstName').focus()
-    editBtn.classList.add('hidden');
-    saveBtn.classList.remove('hidden');
-  })
-  saveBtn.addEventListener('click',()=>{
-    profileCard.classList.remove('edit-mode');
-    textInputs.forEach(input => input.setAttribute('readonly', true));
-    radioInputs.forEach(radio => radio.setAttribute('disabled', true));
-    editBtn.classList.remove('hidden');
-    saveBtn.classList.add('hidden');
-  })
+  editBtn.addEventListener("click", () => {
+    profileCard.classList.add("edit-mode");
+    textInputs.forEach((input) => input.removeAttribute("readonly"));
+    radioInputs.forEach((radio) => radio.removeAttribute("disabled"));
+    document.getElementById("firstName").focus();
+    editBtn.classList.add("hidden");
+    saveBtn.classList.remove("hidden");
+  });
+  saveBtn.addEventListener("click", () => {
+    profileCard.classList.remove("edit-mode");
+    textInputs.forEach((input) => input.setAttribute("readonly", true));
+    radioInputs.forEach((radio) => radio.setAttribute("disabled", true));
+    editBtn.classList.remove("hidden");
+    saveBtn.classList.add("hidden");
+  });
 </script>

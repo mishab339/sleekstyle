@@ -1,0 +1,397 @@
+<!-- breadcrumb -->
+<div class="container">
+  <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+    <a href="index.html" class="stext-109 cl8 hov-cl1 trans-04">
+      Home
+      <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+    </a>
+
+    <span class="stext-109 cl4"> Shopping Cart </span>
+  </div>
+</div>
+
+<!-- Shopping Cart -->
+<div class="bg0 p-t-75 p-b-85">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
+        <div
+          class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm"
+        >
+          <h4 class="mtext-109 cl2">Hello Mishab</h4>
+          <div class="flex-w flex-t bor12 p-b-13"></div>
+
+          <div class="flex-w flex-t bor12 p-t-15 p-b-30">
+            <!-- Profile -->
+            <a
+              href="/account-details"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Profile Information</span>
+              </div>
+            </a>
+
+            <!-- Super Coin -->
+            <a
+              href="/super-coin"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-coins"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Super Coin</span>
+              </div>
+            </a>
+
+            <!-- Orders -->
+            <a
+              href="/orders"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-truck"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Orders</span>
+              </div>
+            </a>
+
+            <!-- Wish List -->
+            <a
+              href="/wish-list"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Wish List</span>
+              </div>
+            </a>
+
+            <!-- Coupons -->
+            <a
+              href="/coupons"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-ticket"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Coupons</span>
+              </div>
+            </a>
+            <a
+              href="/address"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-address-card"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Address</span>
+              </div>
+            </a>
+
+            <!-- Notifications -->
+            <a
+              href="/notifications"
+              class="flex-w flex-t p-t-27 p-b-33 w-full items-center link-row"
+            >
+              <div class="icon-box">
+                <i class="fa-solid fa-bell"></i>
+              </div>
+              <div class="text-box">
+                <span class="mtext-110 cl2">Notifications</span>
+              </div>
+            </a>
+          </div>
+
+          <button
+            class="small-btn flex-c-m stext-101 cl0 bg3 bor14 trans-04 pointer"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search orders..."
+            id="searchInput"
+          />
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-status="all">
+            All Orders
+          </button>
+          <button class="filter-tab" data-status="delivered">Delivered</button>
+          <button class="filter-tab" data-status="processing">
+            Processing
+          </button>
+          <button class="filter-tab" data-status="shipped">Shipped</button>
+          <button class="filter-tab" data-status="pending">Pending</button>
+          <button class="filter-tab" data-status="cancelled">Cancelled</button>
+        </div>
+        <div class="orders-list" id="ordersList">
+          <div
+            class="order-item"
+            data-status="delivered"
+            data-search="wireless headphones ord-2024-001"
+          >
+            <div class="order-content">
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=150&h=120&fit=crop"
+                alt="Wireless Headphones"
+                class="order-image"
+              />
+              <div class="order-details">
+                <div class="product-info">
+                  <div class="order-id">#ORD-2024-001</div>
+                  <div class="product-name">Premium Wireless Headphones</div>
+                  <div class="order-date">Ordered on August 10, 2024</div>
+                </div>
+                <div class="order-meta">
+                  <div class="order-price">$299.99</div>
+                  <div class="order-status status-delivered">Delivered</div>
+                  <div class="order-actions">
+                    <a href="#" class="btn btn-primary">View Details</a>
+                    <a href="#" class="btn btn-secondary">Order Again</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="order-item"
+            data-status="processing"
+            data-search="smartphone case ord-2024-002"
+          >
+            <div class="order-content">
+              <img
+                src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=150&h=120&fit=crop"
+                alt="Smartphone Case"
+                class="order-image"
+              />
+              <div class="order-details">
+                <div class="product-info">
+                  <div class="order-id">#ORD-2024-002</div>
+                  <div class="product-name">Leather Smartphone Case</div>
+                  <div class="order-date">Ordered on August 12, 2024</div>
+                </div>
+                <div class="order-meta">
+                  <div class="order-price">$49.99</div>
+                  <div class="order-status status-processing">Processing</div>
+                  <div class="order-actions">
+                    <a href="#" class="btn btn-primary">Track Order</a>
+                    <a href="#" class="btn btn-secondary">Cancel</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="order-item"
+            data-status="shipped"
+            data-search="running shoes ord-2024-003"
+          >
+            <div class="order-content">
+              <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=150&h=120&fit=crop"
+                alt="Running Shoes"
+                class="order-image"
+              />
+              <div class="order-details">
+                <div class="product-info">
+                  <div class="order-id">#ORD-2024-003</div>
+                  <div class="product-name">Nike Air Max Running Shoes</div>
+                  <div class="order-date">Ordered on August 08, 2024</div>
+                </div>
+                <div class="order-meta">
+                  <div class="order-price">$159.99</div>
+                  <div class="order-status status-shipped">Shipped</div>
+                  <div class="order-actions">
+                    <a href="#" class="btn btn-primary">Track Package</a>
+                    <a href="#" class="btn btn-secondary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order 4 -->
+          <div
+            class="order-item"
+            data-status="delivered"
+            data-search="coffee maker ord-2024-004"
+          >
+            <div class="order-content">
+              <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=150&h=120&fit=crop"
+                alt="Coffee Maker"
+                class="order-image"
+              />
+              <div class="order-details">
+                <div class="product-info">
+                  <div class="order-id">#ORD-2024-004</div>
+                  <div class="product-name">Automatic Coffee Maker</div>
+                  <div class="order-date">Ordered on August 05, 2024</div>
+                </div>
+                <div class="order-meta">
+                  <div class="order-price">$199.99</div>
+                  <div class="order-status status-delivered">Delivered</div>
+                  <div class="order-actions">
+                    <a href="#" class="btn btn-primary">Rate Product</a>
+                    <a href="#" class="btn btn-secondary">Order Again</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order 5 -->
+          <div
+            class="order-item"
+            data-status="pending"
+            data-search="bluetooth speaker ord-2024-005"
+          >
+            <div class="order-content">
+              <img
+                src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=150&h=120&fit=crop"
+                alt="Bluetooth Speaker"
+                class="order-image"
+              />
+              <div class="order-details">
+                <div class="product-info">
+                  <div class="order-id">#ORD-2024-005</div>
+                  <div class="product-name">Portable Bluetooth Speaker</div>
+                  <div class="order-date">Ordered on August 13, 2024</div>
+                </div>
+                <div class="order-meta">
+                  <div class="order-price">$89.99</div>
+                  <div class="order-status status-pending">Pending</div>
+                  <div class="order-actions">
+                    <a href="#" class="btn btn-primary">Check Status</a>
+                    <a href="#" class="btn btn-secondary">Cancel</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order 6 -->
+          <div
+            class="order-item"
+            data-status="cancelled"
+            data-search="laptop macbook ord-2024-006"
+          >
+            <div class="order-content">
+              <img
+                src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=150&h=120&fit=crop"
+                alt="MacBook"
+                class="order-image"
+              />
+              <div class="order-details">
+                <div class="product-info">
+                  <div class="order-id">#ORD-2024-006</div>
+                  <div class="product-name">MacBook Pro 14-inch</div>
+                  <div class="order-date">Ordered on August 01, 2024</div>
+                </div>
+                <div class="order-meta">
+                  <div class="order-price">$1,999.99</div>
+                  <div class="order-status status-cancelled">Cancelled</div>
+                  <div class="order-actions">
+                    <a href="#" class="btn btn-primary">Reorder</a>
+                    <a href="#" class="btn btn-secondary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order 7 -->
+          <div
+            class="order-item"
+            data-status="delivered"
+            data-search="smart watch apple ord-2024-007"
+          >
+            <div class="order-content">
+              <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=150&h=120&fit=crop"
+                alt="Apple Watch"
+                class="order-image"
+              />
+              <div class="order-details">
+                <div class="product-info">
+                  <div class="order-id">#ORD-2024-007</div>
+                  <div class="product-name">Apple Watch Series 9</div>
+                  <div class="order-date">Ordered on July 28, 2024</div>
+                </div>
+                <div class="order-meta">
+                  <div class="order-price">$399.99</div>
+                  <div class="order-status status-delivered">Delivered</div>
+                  <div class="order-actions">
+                    <a href="#" class="btn btn-primary">Write Review</a>
+                    <a href="#" class="btn btn-secondary">Order Again</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="order-item"
+            data-status="processing"
+            data-search="tablet ipad ord-2024-008"
+          >
+            <div class="order-content">
+              <img
+                src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=150&h=120&fit=crop"
+                alt="iPad"
+                class="order-image"
+              />
+              <div class="order-details">
+                <div class="product-info">
+                  <div class="order-id">#ORD-2024-008</div>
+                  <div class="product-name">iPad Air 5th Generation</div>
+                  <div class="order-date">Ordered on August 14, 2024</div>
+                </div>
+                <div class="order-meta">
+                  <div class="order-price">$599.99</div>
+                  <div class="order-status status-processing">Processing</div>
+                  <div class="order-actions">
+                    <a href="#" class="btn btn-primary">Track Order</a>
+                    <a href="#" class="btn btn-secondary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="no-orders" id="noOrders" style="display: none">
+          <h3>No orders found</h3>
+          <p>Try adjusting your search or filter criteria</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+
+<script>
+  document.querySelectorAll(".link-row").forEach((link) => {
+    if (link.getAttribute("href") === window.location.pathname) {
+      link.style.color = "#717fe0";
+      const icon = link.querySelector("i");
+      if (icon) {
+        icon.style.color = "#717fe0";
+      }
+    }
+  });
+</script>
