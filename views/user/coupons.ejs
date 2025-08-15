@@ -120,51 +120,64 @@
         </div>
       </div>
       <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
-            <div class="coupons-container">
-        <h2>Offers & Coupons</h2>
-
-        <div class="coupon-entry-card">
-            <input type="text" placeholder="Enter coupon code">
-            <button>Apply</button>
-        </div>
-
-        <div class="coupon-card">
-            <div class="coupon-discount">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.75-2.7 1.75-2.28 0-3.03-.88-3.1-2.1H6.1c.07 2.05 1.41 3.54 3.4 4.03v2.17h3v-2.15c2.07-.42 3.5-1.76 3.5-3.87 0-2.02-1.47-3.5-4.2-4.11z"></path></svg>
-                <div class="discount-value">₹200</div>
-                <div class="discount-type">FLAT OFF</div>
-            </div>
-            <div class="coupon-details">
-                <p class="coupon-title">Flat ₹200 Off On All Electronics</p>
-                <p class="coupon-terms">Valid on a minimum purchase of ₹1,999.</p>
-                <p class="coupon-expiry">Expires on: 15 Aug 2025</p>
-                <div class="coupon-actions">
-                    <div class="coupon-code">ELEC200</div>
-                    <button>Copy</button>
-                    <button class="apply-btn">Apply</button>
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="container">
+            <div class="hero-content">
+              <div class="coupon-search-container">
+                <div class="search-input-wrapper">
+                  <input
+                    type="text"
+                    class="coupon-search-input"
+                    placeholder="Search for coupons, brands, or categories..."
+                    id="searchInput"
+                  />
                 </div>
+                <button class="filter-btn" onclick="handleFilter()">
+                  <svg
+                    class="search-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                  </svg>
+                </button>
+              </div>
             </div>
-        </div>
+          </div>
+        </section>
+        <section class="coupons-section">
+          <div class="container">
+            <div class="coupons-header">
+              <h2 class="coupons-title" id="sectionTitle">Featured Deals</h2>
+              <span class="coupons-count" id="couponCount"
+                >6 coupons found</span
+              >
+            </div>
 
-        <div class="coupon-card">
-            <div class="coupon-discount">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 4C8.88 4 10 5.12 10 6.5S8.88 9 7.5 9 5 7.88 5 6.5 6.12 4 7.5 4zm0 1.5C7.22 5.5 7 5.72 7 6s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm9 9c1.38 0 2.5 1.12 2.5 2.5S17.88 19 16.5 19s-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5zm0 1.5c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zM19.07 4.93l-14 14.14-1.41-1.41 14.07-14.07 1.41 1.41z"></path></svg>
-                <div class="discount-value">20%</div>
-                <div class="discount-type">UPTO ₹500</div>
+            <div class="coupons-grid" id="couponsGrid">
+              <!-- Coupons will be dynamically inserted here -->
             </div>
-            <div class="coupon-details">
-                <p class="coupon-title">20% Off On All Fashion & Apparel</p>
-                <p class="coupon-terms">Not valid on already discounted items.</p>
-                <p class="coupon-expiry">Expires on: 31 Aug 2025</p>
-                <div class="coupon-actions">
-                    <div class="coupon-code">FASHION20</div>
-                    <button>Copy</button>
-                    <button class="apply-btn">Apply</button>
-                </div>
-            </div>
-        </div>
 
-    </div>
+            <!-- No Results -->
+            <div class="no-results" id="noResults" style="display: none">
+              <div class="emoji">🔍</div>
+              <h3>No coupons found</h3>
+              <p>Try adjusting your search or category filter</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Toast Notification -->
+        <div class="toast" id="toast">
+          <div class="toast-title" id="toastTitle">Code Copied!</div>
+          <div class="toast-description" id="toastDescription">
+            Coupon code has been copied to your clipboard.
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -181,4 +194,255 @@
       }
     }
   });
+  // Sample coupon data
+  const coupons = [
+    {
+      id: "1",
+      brand: "TechStore",
+      logo: "💻",
+      title: "Summer Electronics Sale",
+      description:
+        "Get amazing discounts on laptops, smartphones, tablets and more. Perfect time to upgrade your tech setup!",
+      discount: "25% OFF",
+      code: "TECH25",
+      category: "Electronics",
+      expiresAt: "Dec 31, 2024",
+      isExpiring: false,
+    },
+    {
+      id: "2",
+      brand: "FashionHub",
+      logo: "👗",
+      title: "Winter Fashion Collection",
+      description:
+        "Discover the latest fashion trends with exclusive discounts on clothing, shoes, and accessories.",
+      discount: "40% OFF",
+      code: "FASHION40",
+      category: "Fashion",
+      expiresAt: "Nov 30, 2024",
+      isExpiring: true,
+    },
+    {
+      id: "3",
+      brand: "HomeDecor",
+      logo: "🏠",
+      title: "Home Makeover Deals",
+      description:
+        "Transform your living space with our premium furniture and home decor items at unbeatable prices.",
+      discount: "30% OFF",
+      code: "HOME30",
+      category: "Home & Garden",
+      expiresAt: "Jan 15, 2025",
+      isExpiring: false,
+    },
+    {
+      id: "4",
+      brand: "TechStore",
+      logo: "🎮",
+      title: "Gaming Gear Special",
+      description:
+        "Level up your gaming experience with discounts on gaming laptops, monitors, and accessories.",
+      discount: "20% OFF",
+      code: "GAME20",
+      category: "Electronics",
+      expiresAt: "Dec 15, 2024",
+      isExpiring: false,
+    },
+    {
+      id: "5",
+      brand: "FashionHub",
+      logo: "✨",
+      title: "Weekend Flash Sale",
+      description:
+        "Limited time offer on premium designer clothing and luxury accessories. Don't miss out!",
+      discount: "50% OFF",
+      code: "FLASH50",
+      category: "Fashion",
+      expiresAt: "Nov 25, 2024",
+      isExpiring: true,
+    },
+    {
+      id: "6",
+      brand: "HomeDecor",
+      logo: "🍴",
+      title: "Kitchen Essentials",
+      description:
+        "Upgrade your kitchen with modern appliances and elegant kitchenware at discounted prices.",
+      discount: "35% OFF",
+      code: "KITCHEN35",
+      category: "Home & Garden",
+      expiresAt: "Dec 20, 2024",
+      isExpiring: false,
+    },
+  ];
+
+  let currentFilter = "All";
+  let currentSearch = "";
+
+  // DOM Elements
+  const searchInput = document.getElementById("searchInput");
+  const couponsGrid = document.getElementById("couponsGrid");
+  const noResults = document.getElementById("noResults");
+  const sectionTitle = document.getElementById("sectionTitle");
+  const couponCount = document.getElementById("couponCount");
+  const toast = document.getElementById("toast");
+
+  // Initialize
+  document.addEventListener("DOMContentLoaded", function () {
+    renderCoupons();
+
+    // Add search functionality
+    searchInput.addEventListener("input", function (e) {
+      currentSearch = e.target.value;
+      renderCoupons();
+    });
+  });
+
+  // Filter by category
+  function filterCategory(category) {
+    currentFilter = category;
+
+    // Update active button
+    document.querySelectorAll(".category-btn").forEach((btn) => {
+      btn.classList.remove("active");
+    });
+    event.target.classList.add("active");
+
+    renderCoupons();
+  }
+
+  // Handle filter button click
+  function handleFilter() {
+    showToast("Filter Options", "Advanced filters coming soon!");
+  }
+
+  // Copy coupon code
+  function copyCouponCode(code) {
+    navigator.clipboard
+      .writeText(code)
+      .then(() => {
+        showToast(
+          "Code Copied!",
+          `Coupon code ${code} has been copied to your clipboard.`
+        );
+      })
+      .catch(() => {
+        // Fallback for older browsers
+        const textArea = document.createElement("textarea");
+        textArea.value = code;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+        showToast(
+          "Code Copied!",
+          `Coupon code ${code} has been copied to your clipboard.`
+        );
+      });
+  }
+
+  // Show toast notification
+  function showToast(title, description) {
+    document.getElementById("toastTitle").textContent = title;
+    document.getElementById("toastDescription").textContent = description;
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 3000);
+  }
+
+  // Handle newsletter subscription
+  function handleNewsletter(event) {
+    event.preventDefault();
+    const email = event.target.querySelector("input").value;
+    showToast("Subscribed!", `Thank you for subscribing with ${email}!`);
+    event.target.reset();
+  }
+
+  // Filter and render coupons
+  function renderCoupons() {
+    const filteredCoupons = coupons.filter((coupon) => {
+      const matchesSearch =
+        coupon.brand.toLowerCase().includes(currentSearch.toLowerCase()) ||
+        coupon.title.toLowerCase().includes(currentSearch.toLowerCase()) ||
+        coupon.description.toLowerCase().includes(currentSearch.toLowerCase());
+      const matchesCategory =
+        currentFilter === "All" || coupon.category === currentFilter;
+      return matchesSearch && matchesCategory;
+    });
+
+    // Update title and count
+    sectionTitle.textContent =
+      currentFilter === "All" ? "Featured Deals" : `${currentFilter} Deals`;
+    couponCount.textContent = `${filteredCoupons.length} coupon${
+      filteredCoupons.length !== 1 ? "s" : ""
+    } found`;
+
+    if (filteredCoupons.length === 0) {
+      couponsGrid.style.display = "none";
+      noResults.style.display = "block";
+    } else {
+      couponsGrid.style.display = "grid";
+      noResults.style.display = "none";
+
+      couponsGrid.innerHTML = filteredCoupons
+        .map(
+          (coupon) => `
+                    <div class="coupon-card ${
+                      coupon.isExpiring ? "expiring" : ""
+                    }">
+                        <div class="discount-badge">${coupon.discount}</div>
+                        
+                        <div class="brand-header">
+                            <div class="brand-logo">
+                                <div style="font-size: 2rem;">${
+                                  coupon.logo
+                                }</div>
+                            </div>
+                            <div class="brand-info">
+                                <h3>${coupon.brand}</h3>
+                                <span class="category-badge">${
+                                  coupon.category
+                                }</span>
+                            </div>
+                        </div>
+
+                        <div class="coupon-content">
+                            <h4 class="coupon-title">${coupon.title}</h4>
+                            <p class="coupon-description">${
+                              coupon.description
+                            }</p>
+                        </div>
+
+                        <div class="expiry-info">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12,6 12,12 16,14"></polyline>
+                            </svg>
+                            <span>Expires: ${coupon.expiresAt}</span>
+                        </div>
+
+                        <div class="action-section">
+                            <div class="code-container">
+                                <span class="code-label">Coupon Code</span>
+                                <span class="code-value">${coupon.code}</span>
+                            </div>
+                            <button class="copy-btn" onclick="copyCouponCode('${
+                              coupon.code
+                            }')">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                `
+        )
+        .join("");
+    }
+  }
 </script>

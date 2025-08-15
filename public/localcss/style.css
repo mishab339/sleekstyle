@@ -705,3 +705,342 @@ a {
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
 }
+.hero {
+  background: linear-gradient(
+    135deg,
+    hsl(14, 100%, 57%) 0%,
+    hsl(25, 100%, 67%) 50%,
+    hsl(217, 91%, 60%) 100%
+  );
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+/* Search Bar */
+.coupon-search-container {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.coupon-search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.coupon-search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-icon {
+  position: absolute;
+  right: 0.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.6);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.filter-btn {
+  padding: 0 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.coupons-section {
+  padding: 4rem 0;
+}
+
+.coupons-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.coupons-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+.coupons-count {
+  color:  hsl(215.4, 16.3%, 46.9%);;
+}
+
+.coupons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Coupon Card */
+.coupon-card {
+  position: relative;
+  background: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(210, 40%, 98%) 100%);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px -2px hsla(14, 100%, 57%, 0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.coupon-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px -4px hsla(14, 100%, 57%, 0.25);
+}
+
+.coupon-card.expiring {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.discount-badge {
+  position: absolute;
+  top: -0.75rem;
+  right: -0.75rem;
+  background: linear-gradient(135deg, hsl(14, 100%, 57%), hsl(25, 100%, 67%));
+  color:  hsl(0, 0%, 100%);;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.brand-logo {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: rgba(hsl(210, 40%, 96.1%), 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.brand-info h3 {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.category-badge {
+  background: hsl(210, 40%, 96.1%);
+  color: hsl(222.2, 47.4%, 11.2%);
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.coupon-content {
+  margin-bottom: 1rem;
+}
+
+.coupon-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.coupon-description {
+  color:  hsl(215.4, 16.3%, 46.9%);;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.expiry-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color:  hsl(215.4, 16.3%, 46.9%);;
+  font-size: 0.75rem;
+}
+
+.action-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.code-container {
+  flex: 1;
+  background: rgba(hsl(210, 40%, 96.1%), 0.5);
+  border: 2px dashed rgba( hsl(215.4, 16.3%, 46.9%), 0.3);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.code-label {
+  font-size: 0.75rem;
+  color: hsl(215.4, 16.3%, 46.9%);
+  display: block;
+}
+
+.code-value {
+  font-family: "Monaco", "Menlo", monospace;
+  font-weight: bold;
+  color: hsl(222.2, 84%, 4.9%);
+}
+
+.copy-btn {
+  background: linear-gradient(135deg, hsl(14, 100%, 57%), hsl(25, 100%, 67%));
+  color:  hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.copy-btn:hover {
+  opacity: 0.9;
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  top: 5rem;
+  right: 1rem;
+  background: hsl(0, 0%, 100%);
+  border: 1px solid  hsl(214.3, 31.8%, 91.4%);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  max-width: 20rem;
+}
+
+.toast.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.toast-title {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.toast-description {
+  color: hsl(215.4, 16.3%, 46.9%);
+  font-size: 0.875rem;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.no-results .emoji {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.no-results h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.no-results p {
+  color: hsl(215.4, 16.3%, 46.9%);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px hsla(25, 100%, 67%, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px hsla(25, 100%, 67%, 0.8);
+  }
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .newsletter-form {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .coupons-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .coupons-grid {
+    grid-template-columns: 1fr;
+  }
+}
