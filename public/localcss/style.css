@@ -798,7 +798,7 @@ a {
 }
 
 .coupons-count {
-  color:  hsl(215.4, 16.3%, 46.9%);;
+  color: hsl(215.4, 16.3%, 46.9%);
 }
 
 .coupons-grid {
@@ -811,7 +811,11 @@ a {
 /* Coupon Card */
 .coupon-card {
   position: relative;
-  background: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(210, 40%, 98%) 100%);
+  background: linear-gradient(
+    145deg,
+    hsl(0, 0%, 100%) 0%,
+    hsl(210, 40%, 98%) 100%
+  );
   border-radius: 0.75rem;
   padding: 1.5rem;
   box-shadow: 0 4px 20px -2px hsla(14, 100%, 57%, 0.15);
@@ -833,7 +837,7 @@ a {
   top: -0.75rem;
   right: -0.75rem;
   background: linear-gradient(135deg, hsl(14, 100%, 57%), hsl(25, 100%, 67%));
-  color:  hsl(0, 0%, 100%);;
+  color: hsl(0, 0%, 100%);
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.875rem;
@@ -889,7 +893,7 @@ a {
 }
 
 .coupon-description {
-  color:  hsl(215.4, 16.3%, 46.9%);;
+  color: hsl(215.4, 16.3%, 46.9%);
   font-size: 0.875rem;
   line-height: 1.5;
 }
@@ -899,7 +903,7 @@ a {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
-  color:  hsl(215.4, 16.3%, 46.9%);;
+  color: hsl(215.4, 16.3%, 46.9%);
   font-size: 0.75rem;
 }
 
@@ -912,7 +916,7 @@ a {
 .code-container {
   flex: 1;
   background: rgba(hsl(210, 40%, 96.1%), 0.5);
-  border: 2px dashed rgba( hsl(215.4, 16.3%, 46.9%), 0.3);
+  border: 2px dashed rgba(hsl(215.4, 16.3%, 46.9%), 0.3);
   border-radius: 0.5rem;
   padding: 0.5rem 0.75rem;
 }
@@ -931,7 +935,7 @@ a {
 
 .copy-btn {
   background: linear-gradient(135deg, hsl(14, 100%, 57%), hsl(25, 100%, 67%));
-  color:  hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   border: none;
   border-radius: 0.375rem;
   padding: 0.5rem 1rem;
@@ -953,7 +957,7 @@ a {
   top: 5rem;
   right: 1rem;
   background: hsl(0, 0%, 100%);
-  border: 1px solid  hsl(214.3, 31.8%, 91.4%);
+  border: 1px solid hsl(214.3, 31.8%, 91.4%);
   border-radius: 0.5rem;
   padding: 1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -1044,3 +1048,386 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+/* ADDRESS PAGE CSS */
+
+.address-header {
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(220, 60%, 98%));
+  border-bottom: 1px solid hsl(214, 32%, 91%);
+  padding: 32px 0;
+}
+.address-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.address-header-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.address-header-icon {
+  background: hsl(217, 91%, 60%, 0.1);
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.address-header-icon i {
+  font-size: 32px;
+  color: hsl(217, 91%, 60%);
+}
+
+.address-header-title h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.address-header-title p {
+  color: hsl(215, 16%, 47%);
+  font-size: 16px;
+}
+.address-btn-primary {
+  background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(217, 91%, 70%));
+  width: 100%;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px hsl(220, 20%, 15%, 0.1);
+}
+.address-btn-primary:hover {
+  background: linear-gradient(135deg, hsl(217, 91%, 55%), hsl(217, 91%, 65%));
+  box-shadow: 0 10px 15px -3px hsl(220, 20%, 15%, 0.1);
+  transform: translateY(-1px);
+}
+.main-content {
+  padding: 32px 0;
+}
+.address-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+}
+.address-card {
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(220, 60%, 98%));
+  border: 1px solid hsl(214, 32%, 91%, 0.5);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.address-card:hover {
+  border-color: hsl(217, 91%, 60%, 0.2);
+  box-shadow: 0 10px 15px -3px hsl(220, 20%, 15%, 0.1);
+}
+.address-card-content {
+  padding: 24px;
+  position: relative;
+}
+.address-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.address-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.address-icon {
+  background: hsl(217, 91%, 60%, 0.1);
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.address-icon i {
+  color: hsl(217, 91%, 60%);
+  font-size: 16px;
+}
+.address-info h3 {
+  font-weight: 600;
+  color: hsl(220, 20%, 15%);
+  margin-bottom: 4px;
+}
+.badge {
+  background: hsl(214, 32%, 91%);
+  color: hsl(220, 20%, 15%);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.card-actions {
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.address-card:hover .card-actions {
+  opacity: 1;
+}
+.address-details {
+  space-y: 12px;
+}
+
+.address-text {
+  margin-bottom: 12px;
+}
+
+.street {
+  font-weight: 500;
+  color: hsl(220, 20%, 15%);
+  margin-bottom: 4px;
+}
+
+.city-state {
+  color: hsl(215, 16%, 47%);
+  font-size: 14px;
+}
+.phone-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: hsl(215, 16%, 47%);
+  font-size: 14px;
+}
+
+.phone-info i {
+  font-size: 12px;
+}
+.card-decoration {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(
+    135deg,
+    hsl(217, 91%, 60%, 0.05),
+    hsl(217, 91%, 60%, 0.1)
+  );
+  border-radius: 50%;
+  filter: blur(16px);
+  opacity: 0.5;
+}
+.empty-state {
+  text-align: center;
+  padding: 64px 0;
+}
+
+.empty-icon {
+  background: hsl(210, 40%, 96%, 0.3);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.empty-icon i {
+  font-size: 40px;
+  color: hsl(215, 16%, 47%);
+}
+
+.empty-state h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  color: hsl(215, 16%, 47%);
+  margin-bottom: 24px;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 24px;
+}
+.modal-overlay.active {
+  display: flex;
+}
+.address-form-card {
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(220, 60%, 98%));
+  border: 1px solid hsl(214, 32%, 91%, 0.5);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 15px -3px hsl(220, 20%, 15%, 0.1);
+  max-height: 90vh;
+  overflow-y: auto;
+  clip-path: inset(0 round 12px);
+}
+.form-header {
+  padding: 24px 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(214, 32%, 91%);
+}
+.form-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.address-form-icon {
+  background: hsl(217, 91%, 60%, 0.1);
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.address-form-icon i {
+  color: hsl(217, 91%, 60%);
+  font-size: 20px;
+}
+
+.form-title h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.address-form {
+  padding: 24px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: hsl(220, 20%, 15%);
+}
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid hsl(214, 32%, 91%);
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  background: hsl(0, 0%, 100%);
+}
+.form-group input:focus {
+  outline: none;
+  border-color: hsl(217, 91%, 60%);
+  box-shadow: 0 0 0 3px hsl(217, 91%, 60%, 0.2);
+}
+.form-switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: hsl(210, 40%, 96%, 0.3);
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+.form-switch input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+.form-switch label {
+  margin: 0;
+  font-weight: 500;
+  color: hsl(220, 20%, 15%);
+  cursor: pointer;
+}
+.form-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 16px;
+}
+.form-actions .address-btn-primary {
+  flex: 1;
+}
+.address-btn-close {
+  background: transparent;
+  border: 1px solid hsl(214, 32%, 91%);
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.address-btn-close:hover {
+  background: hsl(0, 84%, 60%, 0.1);
+  color: hsl(0, 84%, 60%);
+  border-color: hsl(0, 84%, 60%, 0.2);
+}
+      .address-btn-secondary {
+        background: hsl(210, 40%, 96%);
+        color: hsl(220, 20%, 15%);
+        border: 1px solid hsl(214, 32%, 91%);
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        flex: 1;
+      }
+
+      .address-btn-secondary:hover {
+        background: hsl(210, 40%, 93%);
+      }
+
+      .btn-icon {
+        background: transparent;
+        border: 1px solid hsl(214, 32%, 91%);
+        padding: 8px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-edit:hover {
+        background: hsl(217, 91%, 60%, 0.1);
+        color: hsl(217, 91%, 60%);
+        border-color: hsl(217, 91%, 60%, 0.2);
+      }
+
+      .btn-delete:hover {
+        background: hsl(0, 84%, 60%, 0.1);
+        color: hsl(0, 84%, 60%);
+        border-color: hsl(0, 84%, 60%, 0.2);
+      }

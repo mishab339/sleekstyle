@@ -307,7 +307,6 @@
       btn.classList.remove("active");
     });
     event.target.classList.add("active");
-
     renderCoupons();
   }
 
@@ -360,7 +359,7 @@
     showToast("Subscribed!", `Thank you for subscribing with ${email}!`);
     event.target.reset();
   }
-
+  
   // Filter and render coupons
   function renderCoupons() {
     const filteredCoupons = coupons.filter((coupon) => {
