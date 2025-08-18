@@ -120,7 +120,396 @@
         </div>
       </div>
       <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
-        
+        <div class="notification-header">
+          <div class="header-content">
+            <div class="header-left">
+              <div class="header-icon">
+                <i class="fa-solid fa-bell"></i>
+              </div>
+              <div class="header-text">
+                <h1>Notifications</h1>
+                <p id="notification-count">
+                  7 total notifications
+                  <span id="unread-badge" class="unread-badge">5 unread</span>
+                </p>
+              </div>
+            </div>
+            <div class="header-actions">
+              <button id="mark-all-read" class="btn btn-primary">
+                <i class="fa-regular fa-circle-check"></i>
+                <span>Mark All Read</span>
+              </button>
+              <button id="clear-all" class="btn notify-btn-secondary">
+                <i class="fa-solid fa-trash-can"></i>
+                <span>Clear All</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="notification-filters">
+          <div class="notify-filter-content">
+            <div class="type-filters">
+              <button class="filter-btn active" data-type="all">
+                <i class="fa-solid fa-filter"></i>
+                <span>All</span>
+                <span class="count" id="count-all">7</span>
+              </button>
+              <button class="filter-btn" data-type="order">
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>Orders</span>
+                <span class="count" id="count-order">3</span>
+              </button>
+              <button class="filter-btn" data-type="promotion">
+                <i class="fa-solid fa-gift"></i>
+                <span>Promotions</span>
+                <span class="count" id="count-promotion">2</span>
+              </button>
+              <button class="filter-btn" data-type="account">
+                <i class="fa-solid fa-credit-card"></i>
+                <span>Account</span>
+                <span class="count" id="count-account">1</span>
+              </button>
+              <button class="filter-btn" data-type="system">
+                <i class="fa-solid fa-bell"></i>
+                <span>System</span>
+                <span class="count" id="count-system">1</span>
+              </button>
+            </div>
+            <div class="status-filter">
+              <label for="status-select">Status:</label>
+              <select id="status-select">
+                <option value="all">All</option>
+                <option value="unread">Unread (5)</option>
+                <option value="read">Read</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notifications List -->
+        <div id="notifications-container" class="notifications-container">
+          <!-- Notifications will be dynamically inserted here -->
+          <!-- Notification 1 -->
+          <div class="notification-card unread" data-id="1">
+            <div class="unread-indicator"></div>
+            <div class="notification-content">
+              <div class="notification-main">
+                <div class="notification-body">
+                  <div class="notification-icon order">
+                    <i class="fa-solid fa-truck-fast"></i>
+                  </div>
+                  <div class="notification-text">
+                    <h3 class="notification-title">Order Shipped</h3>
+                    <p class="notification-message">
+                      Your order #12345 has been shipped and is on its way to
+                      you!
+                    </p>
+                    <div class="notification-metadata">
+                      <span><i class="fa-solid fa-truck-fast"></i>Order #12345</span>
+                      <span>$89.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="notification-actions">
+                  <button
+                    class="action-btn read-btn"
+                    onclick="toggleRead('1')"
+                    title="Mark as read"
+                  >
+                     <i class="fa-solid fa-circle-check"></i>
+                  </button>
+                  <button
+                    class="action-btn delete-btn"
+                    onclick="deleteNotification('1')"
+                    title="Delete notification"
+                  >
+                   <i class="fa-regular fa-circle-xmark"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <div class="notification-time">
+                  <i data-lucide="clock"></i>
+                  <span>2 hours ago</span>
+                </div>
+                <a href="#" class="view-details">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notification 2 -->
+          <div class="notification-card unread" data-id="2">
+            <div class="unread-indicator"></div>
+            <div class="notification-content">
+              <div class="notification-main">
+                <div class="notification-body">
+                  <div class="notification-icon promotion">
+                    <i data-lucide="tag"></i>
+                  </div>
+                  <div class="notification-text">
+                    <h3 class="notification-title">Flash Sale Alert!</h3>
+                    <p class="notification-message">
+                      50% off all electronics - Limited time offer ending soon.
+                    </p>
+                  </div>
+                </div>
+                <div class="notification-actions">
+                  <button
+                    class="action-btn read-btn"
+                    onclick="toggleRead('2')"
+                    title="Mark as read"
+                  >
+                    <i data-lucide="check-circle"></i>
+                  </button>
+                  <button
+                    class="action-btn delete-btn"
+                    onclick="deleteNotification('2')"
+                    title="Delete notification"
+                  >
+                    <i data-lucide="x"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <div class="notification-time">
+                  <i data-lucide="clock"></i>
+                  <span>4 hours ago</span>
+                </div>
+                <a href="#" class="view-details">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notification 3 -->
+          <div class="notification-card read" data-id="3">
+            <div class="notification-content">
+              <div class="notification-main">
+                <div class="notification-body">
+                  <div class="notification-icon order">
+                    <i data-lucide="package"></i>
+                  </div>
+                  <div class="notification-text">
+                    <h3 class="notification-title">Order Delivered</h3>
+                    <p class="notification-message">
+                      Your order #12340 has been successfully delivered.
+                    </p>
+                    <div class="notification-metadata">
+                      <span><i data-lucide="package"></i> Order #12340</span>
+                      <span>$156.75</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="notification-actions">
+                  <button
+                    class="action-btn read-btn read"
+                    onclick="toggleRead('3')"
+                    title="Mark as unread"
+                  >
+                    <i data-lucide="check-circle"></i>
+                  </button>
+                  <button
+                    class="action-btn delete-btn"
+                    onclick="deleteNotification('3')"
+                    title="Delete notification"
+                  >
+                    <i data-lucide="x"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <div class="notification-time">
+                  <i data-lucide="clock"></i>
+                  <span>1 day ago</span>
+                </div>
+                <a href="#" class="view-details">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notification 4 -->
+          <div class="notification-card read" data-id="4">
+            <div class="notification-content">
+              <div class="notification-main">
+                <div class="notification-body">
+                  <div class="notification-icon account">
+                    <i data-lucide="user"></i>
+                  </div>
+                  <div class="notification-text">
+                    <h3 class="notification-title">Payment Method Updated</h3>
+                    <p class="notification-message">
+                      Your default payment method has been successfully updated.
+                    </p>
+                  </div>
+                </div>
+                <div class="notification-actions">
+                  <button
+                    class="action-btn read-btn read"
+                    onclick="toggleRead('4')"
+                    title="Mark as unread"
+                  >
+                    <i data-lucide="check-circle"></i>
+                  </button>
+                  <button
+                    class="action-btn delete-btn"
+                    onclick="deleteNotification('4')"
+                    title="Delete notification"
+                  >
+                    <i data-lucide="x"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <div class="notification-time">
+                  <i data-lucide="clock"></i>
+                  <span>2 days ago</span>
+                </div>
+                <a href="#" class="view-details">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notification 5 -->
+          <div class="notification-card unread" data-id="5">
+            <div class="unread-indicator"></div>
+            <div class="notification-content">
+              <div class="notification-main">
+                <div class="notification-body">
+                  <div class="notification-icon system">
+                    <i data-lucide="shield-alert"></i>
+                  </div>
+                  <div class="notification-text">
+                    <h3 class="notification-title">Security Alert</h3>
+                    <p class="notification-message">
+                      New login detected from a different device. Was this you?
+                    </p>
+                  </div>
+                </div>
+                <div class="notification-actions">
+                  <button
+                    class="action-btn read-btn"
+                    onclick="toggleRead('5')"
+                    title="Mark as read"
+                  >
+                    <i data-lucide="check-circle"></i>
+                  </button>
+                  <button
+                    class="action-btn delete-btn"
+                    onclick="deleteNotification('5')"
+                    title="Delete notification"
+                  >
+                    <i data-lucide="x"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <div class="notification-time">
+                  <i data-lucide="clock"></i>
+                  <span>3 days ago</span>
+                </div>
+                <a href="#" class="view-details">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notification 6 -->
+          <div class="notification-card unread" data-id="6">
+            <div class="unread-indicator"></div>
+            <div class="notification-content">
+              <div class="notification-main">
+                <div class="notification-body">
+                  <div class="notification-icon order">
+                    <i data-lucide="package"></i>
+                  </div>
+                  <div class="notification-text">
+                    <h3 class="notification-title">Order Processing</h3>
+                    <p class="notification-message">
+                      Your order #12346 is being prepared for shipment.
+                    </p>
+                    <div class="notification-metadata">
+                      <span><i data-lucide="package"></i> Order #12346</span>
+                      <span>$234.50</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="notification-actions">
+                  <button
+                    class="action-btn read-btn"
+                    onclick="toggleRead('6')"
+                    title="Mark as read"
+                  >
+                   <i class="fa-solid fa-circle-check"></i>
+                  </button>
+                  <button
+                    class="action-btn delete-btn"
+                    onclick="deleteNotification('6')"
+                    title="Delete notification"
+                  >
+                   <i class="fa-regular fa-circle-xmark"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <div class="notification-time">
+                  <i data-lucide="clock"></i>
+                  <span>30 minutes ago</span>
+                </div>
+                <a href="#" class="view-details">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notification 7 -->
+          <div class="notification-card read" data-id="7">
+            <div class="notification-content">
+              <div class="notification-main">
+                <div class="notification-body">
+                  <div class="notification-icon promotion">
+                    <i data-lucide="tag"></i>
+                  </div>
+                  <div class="notification-text">
+                    <h3 class="notification-title">Welcome Bonus</h3>
+                    <p class="notification-message">
+                      Enjoy 20% off your next purchase with code WELCOME20.
+                    </p>
+                  </div>
+                </div>
+                <div class="notification-actions">
+                  <button
+                    class="action-btn read-btn read"
+                    onclick="toggleRead('7')"
+                    title="Mark as unread"
+                  >
+                    <i data-lucide="check-circle"></i>
+                  </button>
+                  <button
+                    class="action-btn delete-btn"
+                    onclick="deleteNotification('7')"
+                    title="Delete notification"
+                  >
+                    <i data-lucide="x"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <div class="notification-time">
+                  <i data-lucide="clock"></i>
+                  <span>5 days ago</span>
+                </div>
+                <a href="#" class="view-details">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="empty-state" class="empty-state" style="display: none">
+          <div class="empty-icon">
+            <i data-lucide="check-circle"></i>
+          </div>
+          <h3>All caught up!</h3>
+          <p>
+            You have no new notifications. Check back later for updates on your
+            orders and account.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -137,4 +526,353 @@
       }
     }
   });
+  // const mockNotifications = [
+  //   {
+  //     id: "1",
+  //     type: "order",
+  //     title: "Order Shipped",
+  //     message: "Your order #12345 has been shipped and is on its way to you!",
+  //     timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000), // 2 hours ago
+  //     isRead: false,
+  //     metadata: { orderId: "12345", amount: 89.99 },
+  //   },
+  //   {
+  //     id: "2",
+  //     type: "promotion",
+  //     title: "Flash Sale Alert!",
+  //     message: "50% off all electronics - Limited time offer ending soon.",
+  //     timestamp: new Date(Date.now() - 4 * 60 * 60 * 1000), // 4 hours ago
+  //     isRead: false,
+  //   },
+  //   {
+  //     id: "3",
+  //     type: "order",
+  //     title: "Order Delivered",
+  //     message: "Your order #12340 has been successfully delivered.",
+  //     timestamp: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000), // 1 day ago
+  //     isRead: true,
+  //     metadata: { orderId: "12340", amount: 156.75 },
+  //   },
+  //   {
+  //     id: "4",
+  //     type: "account",
+  //     title: "Payment Method Updated",
+  //     message: "Your default payment method has been successfully updated.",
+  //     timestamp: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000), // 2 days ago
+  //     isRead: true,
+  //   },
+  //   {
+  //     id: "5",
+  //     type: "system",
+  //     title: "Security Alert",
+  //     message: "New login detected from a different device. Was this you?",
+  //     timestamp: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000), // 3 days ago
+  //     isRead: false,
+  //   },
+  //   {
+  //     id: "6",
+  //     type: "order",
+  //     title: "Order Processing",
+  //     message: "Your order #12346 is being prepared for shipment.",
+  //     timestamp: new Date(Date.now() - 30 * 60 * 1000), // 30 minutes ago
+  //     isRead: false,
+  //     metadata: { orderId: "12346", amount: 234.5 },
+  //   },
+  //   {
+  //     id: "7",
+  //     type: "promotion",
+  //     title: "Welcome Bonus",
+  //     message: "Enjoy 20% off your next purchase with code WELCOME20.",
+  //     timestamp: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000), // 5 days ago
+  //     isRead: true,
+  //   },
+  // ];
+
+  // State management
+  let notifications = [...mockNotifications];
+  let currentTypeFilter = "all";
+  let currentStatusFilter = "all";
+
+  // Utility functions
+  function getTimeAgo(date) {
+    const now = new Date();
+    const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
+
+    if (diffInSeconds < 60) return "Just now";
+    if (diffInSeconds < 3600) return `${Math.floor(diffInSeconds / 60)}m ago`;
+    if (diffInSeconds < 86400)
+      return `${Math.floor(diffInSeconds / 3600)}h ago`;
+    if (diffInSeconds < 604800)
+      return `${Math.floor(diffInSeconds / 86400)}d ago`;
+    return date.toLocaleDateString();
+  }
+
+  function getNotificationIcon(type) {
+    const icons = {
+      order: "package",
+      promotion: "gift",
+      account: "credit-card",
+      system: "bell",
+    };
+    return icons[type] || "bell";
+  }
+
+  function getCounts() {
+    const all = notifications.length;
+    const unread = notifications.filter((n) => !n.isRead).length;
+    const order = notifications.filter((n) => n.type === "order").length;
+    const promotion = notifications.filter(
+      (n) => n.type === "promotion"
+    ).length;
+    const account = notifications.filter((n) => n.type === "account").length;
+    const system = notifications.filter((n) => n.type === "system").length;
+
+    return { all, unread, order, promotion, account, system };
+  }
+
+  function getFilteredNotifications() {
+    return notifications.filter((notification) => {
+      const typeMatch =
+        currentTypeFilter === "all" || notification.type === currentTypeFilter;
+      const statusMatch =
+        currentStatusFilter === "all" ||
+        (currentStatusFilter === "read" && notification.isRead) ||
+        (currentStatusFilter === "unread" && !notification.isRead);
+
+      return typeMatch && statusMatch;
+    });
+  }
+
+  // Render functions
+  function renderNotificationCard(notification) {
+    const timeAgo = getTimeAgo(notification.timestamp);
+    const icon = getNotificationIcon(notification.type);
+
+    return `
+        <div class="notification-card ${
+          notification.isRead ? "read" : "unread"
+        }" data-id="${notification.id}">
+            ${
+              !notification.isRead ? '<div class="unread-indicator"></div>' : ""
+            }
+            <div class="notification-content">
+                <div class="notification-main">
+                    <div class="notification-body">
+                        <div class="notification-icon ${notification.type}">
+                            <i data-lucide="${icon}"></i>
+                        </div>
+                        <div class="notification-text">
+                            <h3 class="notification-title">${
+                              notification.title
+                            }</h3>
+                            <p class="notification-message">${
+                              notification.message
+                            }</p>
+                            ${
+                              notification.metadata
+                                ? `
+                                <div class="notification-metadata">
+                                    ${
+                                      notification.metadata.orderId
+                                        ? `
+                                        <span>
+                                            <i data-lucide="package"></i>
+                                            Order #${notification.metadata.orderId}
+                                        </span>
+                                    `
+                                        : ""
+                                    }
+                                    ${
+                                      notification.metadata.amount
+                                        ? `
+                                        <span>$${notification.metadata.amount.toFixed(
+                                          2
+                                        )}</span>
+                                    `
+                                        : ""
+                                    }
+                                </div>
+                            `
+                                : ""
+                            }
+                        </div>
+                    </div>
+                    <div class="notification-actions">
+                        <button class="action-btn read-btn ${
+                          notification.isRead ? "read" : ""
+                        }" 
+                                onclick="toggleRead('${notification.id}')"
+                                title="${
+                                  notification.isRead
+                                    ? "Mark as unread"
+                                    : "Mark as read"
+                                }">
+                            <i data-lucide="check-circle"></i>
+                        </button>
+                        <button class="action-btn delete-btn" 
+                                onclick="deleteNotification('${
+                                  notification.id
+                                }')"
+                                title="Delete notification">
+                            <i data-lucide="x"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="notification-footer">
+                    <div class="notification-time">
+                        <i data-lucide="clock"></i>
+                        <span>${timeAgo}</span>
+                    </div>
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+        </div>
+    `;
+  }
+
+  function renderNotifications() {
+    const container = document.getElementById("notifications-container");
+    const emptyState = document.getElementById("empty-state");
+    const filteredNotifications = getFilteredNotifications();
+
+    if (filteredNotifications.length === 0) {
+      container.style.display = "none";
+      emptyState.style.display = "block";
+
+      const hasFilters =
+        currentTypeFilter !== "all" || currentStatusFilter !== "all";
+      emptyState.innerHTML = `
+            <div class="empty-icon">
+                <i data-lucide="${hasFilters ? "bell" : "check-circle"}"></i>
+            </div>
+            <h3>${hasFilters ? "No notifications found" : "All caught up!"}</h3>
+            <p>${
+              hasFilters
+                ? "Try adjusting your filters to see more notifications."
+                : "You have no new notifications. Check back later for updates on your orders and account."
+            }</p>
+        `;
+    } else {
+      container.style.display = "flex";
+      emptyState.style.display = "none";
+      container.innerHTML = filteredNotifications
+        .map(renderNotificationCard)
+        .join("");
+    }
+
+    // Re-initialize Lucide icons
+    lucide.createIcons();
+  }
+
+  function updateCounts() {
+    const counts = getCounts();
+
+    // Update header
+    document.getElementById("notification-count").innerHTML = `${
+      counts.all
+    } total notifications ${
+      counts.unread > 0
+        ? `<span class="unread-badge">${counts.unread} unread</span>`
+        : ""
+    }`;
+
+    // Update filter counts
+    document.getElementById("count-all").textContent = counts.all;
+    document.getElementById("count-order").textContent = counts.order;
+    document.getElementById("count-promotion").textContent = counts.promotion;
+    document.getElementById("count-account").textContent = counts.account;
+    document.getElementById("count-system").textContent = counts.system;
+
+    // Update status select
+    const statusSelect = document.getElementById("status-select");
+    statusSelect.innerHTML = `
+        <option value="all">All</option>
+        <option value="unread">Unread (${counts.unread})</option>
+        <option value="read">Read</option>
+    `;
+    statusSelect.value = currentStatusFilter;
+
+    // Show/hide header buttons
+    const markAllBtn = document.getElementById("mark-all-read");
+    const clearAllBtn = document.getElementById("clear-all");
+
+    markAllBtn.style.display = counts.unread > 0 ? "inline-flex" : "none";
+    clearAllBtn.style.display = counts.all > 0 ? "inline-flex" : "none";
+  }
+
+  // Event handlers
+  function toggleRead(id) {
+    const notification = notifications.find((n) => n.id === id);
+    if (notification) {
+      notification.isRead = !notification.isRead;
+      updateUI();
+    }
+  }
+
+  function deleteNotification(id) {
+    notifications = notifications.filter((n) => n.id !== id);
+    updateUI();
+  }
+
+  function markAllAsRead() {
+    notifications.forEach((n) => (n.isRead = true));
+    updateUI();
+  }
+
+  function clearAll() {
+    notifications = [];
+    updateUI();
+  }
+
+  function setTypeFilter(type) {
+    currentTypeFilter = type;
+
+    // Update active filter button
+    document.querySelectorAll(".filter-btn").forEach((btn) => {
+      btn.classList.remove("active");
+    });
+    document.querySelector(`[data-type="${type}"]`).classList.add("active");
+
+    updateUI();
+  }
+
+  function setStatusFilter(status) {
+    currentStatusFilter = status;
+    updateUI();
+  }
+
+  function updateUI() {
+    updateCounts();
+    renderNotifications();
+  }
+
+  // Initialize the app
+  function init() {
+    // Set up event listeners
+    document
+      .getElementById("mark-all-read")
+      .addEventListener("click", markAllAsRead);
+    document.getElementById("clear-all").addEventListener("click", clearAll);
+
+    // Type filter buttons
+    document.querySelectorAll(".filter-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        setTypeFilter(btn.dataset.type);
+      });
+    });
+
+    // Status filter select
+    document.getElementById("status-select").addEventListener("change", (e) => {
+      setStatusFilter(e.target.value);
+    });
+
+    // Initial render
+    updateUI();
+
+    // Initialize Lucide icons
+    lucide.createIcons();
+  }
+
+  // Start the app when DOM is loaded
+  document.addEventListener("DOMContentLoaded", init);
 </script>
