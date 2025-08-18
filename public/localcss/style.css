@@ -1724,6 +1724,9 @@ a {
 .action-btn.delete-btn:hover {
   background: #fef2f2;
 }
+
+/* OFFER PAGE STYLE */
+
 .hero-banner {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 6rem 2rem 4rem;
@@ -1850,6 +1853,226 @@ a {
   bottom: 30%;
   left: 15%;
   animation-delay: 4s;
+}
+.countdown-section {
+  position: absolute;
+  top: 2.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.countdown-timer {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.time-block {
+  text-align: center;
+}
+
+.time-value {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  min-width: 50px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.time-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+  opacity: 0.9;
+}
+.deals-section {
+  padding: 4rem 1rem;
+  background: #fafafa;
+}
+
+.deals-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.product-card {
+  position: relative;
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  width: 100%;
+  margin: 0 auto;
+}
+.product-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+.product-badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background: #e91e63;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 10;
+}
+.product-wishlist {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+}
+.wishlist-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  transition: all 0.2s;
+  font-size: 22px;
+}
+.wishlist-btn:hover {
+  background: white;
+  color: #e91e63;
+}
+
+.offer-product-image {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+.offer-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.product-card:hover .offer-product-image img {
+  transform: scale(1.05);
+}
+.product-content {
+  padding: 0.75rem;
+}
+.product-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 0.75rem;
+}
+
+.reviews {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.product-pricing {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.sale-price {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.original-price {
+  font-size: 0.875rem;
+  color: #666;
+  text-decoration: line-through;
+}
+
+.savings {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4caf50;
+}
+
+.add-to-cart {
+  width: 100%;
+  background: #e65100;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.add-to-cart:hover {
+  background: #d84315;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.load-more-section {
+  text-align: center;
+}
+
+.load-more-btn {
+  background: white;
+  color: #e65100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.load-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(230, 136, 49, 0.575);
 }
 
 @keyframes float {
